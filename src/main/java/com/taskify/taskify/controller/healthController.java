@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class healthController {
     @GetMapping
     public String checkHealth() {
-        return "Tasktify is up and running!";
+        return "Taskify is up and running!";
     }
 }
