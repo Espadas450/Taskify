@@ -1,6 +1,5 @@
-package com.taskify.taskify.models;
+package com.taskify.taskify.model;
 
-import ch.qos.logback.core.status.Status;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -16,12 +15,13 @@ public class Task {
     @NotBlank(message = "Title cannot be blank!")
     private String title;
 
+    
     private String description;
 
-    @NotNull(message = "Status cannot be null!")
-    private Status status;
+    @NotBlank(message = "Status cannot be blank!")
+    private String status;
 
-    // Get/Set
+    
     public Long getId(){
         return id;
     }
@@ -38,7 +38,7 @@ public class Task {
         this.title = title;
     }
 
-    public String getDescription(String description){
+    public String getDescription(){
         return description;
     }
 
@@ -46,11 +46,11 @@ public class Task {
         this.description = description;
     }
 
-    public Status getStatus(){
+    public String getStatus(){
         return status;
     }
 
-    public void setStatus(Status description){
-        this.status = description;
+    public void setStatus(String status){
+        this.status = status;
     }
 }
