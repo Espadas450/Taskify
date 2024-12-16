@@ -34,14 +34,15 @@ public class TaskController {
     // Delete Task
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteTask(@PathVariable Long id){
-        taskService.deteleTask(id);
+        taskService.deleteTask(id);
         return ResponseEntity.noContent().build();
     }
 
     // Get Task by id
     @GetMapping("/{id}")
-    public ResponseEntity<Task> getTaskById(@PathVariable Long id){
-        Task task = taskService.getTaskById(id);
+    public ResponseEntity<Task> getTaskById(@PathVariable Long id) {
+        Task task = taskService.getTaskById(id)
+                .orElseThrow(() -> new RuntimeException("Task not found with id: " + id));
         return ResponseEntity.ok(task);
     }
 
