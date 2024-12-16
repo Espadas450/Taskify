@@ -2,7 +2,6 @@ package com.taskify.taskify.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "Task")
@@ -28,7 +27,7 @@ public class Task {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.status = description;
+        this.status = status;
     }
 
 
@@ -44,7 +43,7 @@ public class Task {
         return title;
     }
 
-    public void SetTitle(String title){
+    public void setTitle(String title){
         this.title = title;
     }
 
