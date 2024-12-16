@@ -2,14 +2,12 @@ package com.taskify.taskify.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "Task")
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true, nullable = false)
     private Long id;
 
     @NotBlank(message = "Title cannot be blank!")
