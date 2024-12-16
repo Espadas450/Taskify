@@ -3,6 +3,7 @@ package com.taskify.taskify.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 
+
 @Entity
 @Table(name = "Task")
 public class Task {
@@ -22,6 +23,14 @@ public class Task {
 
     }
 
+    // Constructor for the database.
+    public Task(String title, String description, String status) {
+        this.title = title;
+        this.description = description;
+        this.status = status;
+    }
+
+    // Constructor for tests.
     public Task(long id, String title, String description, String status) {
         this.id = id;
         this.title = title;
