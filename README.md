@@ -76,3 +76,8 @@ DELETE */api/tasks/{id}* - Delete a Task
 ## Taskify Collection tested in Postman
 
 URL: https://documenter.getpostman.com/view/38917051/2sAYHzFht8
+
+***
+
+# Data base integration
+
