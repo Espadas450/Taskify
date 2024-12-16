@@ -78,6 +78,15 @@
 					<artifactId>mockito-core</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+			<!-- ↑↑ MILESTONE 3 - JUnit & Mockito dependencies added. ↑↑ -->
+			<!-- ↓↓ MILESTONE 4 - Database Integration. ↓↓ -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+			<!-- ↑↑ MILESTONE 4 - Database Integration. ↑↑ -->
 	</dependencies>
 
 	<build>
