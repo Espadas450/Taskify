@@ -15,13 +15,23 @@ public class Task {
     @NotBlank(message = "Title cannot be blank!")
     private String title;
 
-    
     private String description;
 
     @NotBlank(message = "Status cannot be blank!")
     private String status;
 
-    
+    public Task(){
+
+    }
+
+    public Task(long id, String title, String description, String status) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.status = status;
+    }
+
+
     public Long getId(){
         return id;
     }
@@ -34,7 +44,7 @@ public class Task {
         return title;
     }
 
-    public void SetTitle(String title){
+    public void setTitle(String title){
         this.title = title;
     }
 
